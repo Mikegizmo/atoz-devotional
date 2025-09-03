@@ -31,6 +31,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowRight" || e.key === "ArrowDown") {
     e.preventDefault();
     index = (index + 1) % letters.length;
+    console.log(index);
     letters[index].click();
   }
   if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
@@ -47,4 +48,8 @@ document.addEventListener("keydown", e => {
 });
 
 // load instructions first
-panel.innerHTML = `<p>Click a letter around the panel, press arrow keys, or type a letter A–Z to explore the names and attributes of God.</p>`;
+panel.innerHTML = `<h1>A to Z Devotional</h1>
+        <p>Click, tap, or press a letter to reveal one of God's names or attributes,
+        with meaning and Scripture reference. Use arrow keys to move clockwise or
+        counter-clockwise around the letters. Screen readers will announce the
+        active content.</p>`;
